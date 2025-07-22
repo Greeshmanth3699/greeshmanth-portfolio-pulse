@@ -1,0 +1,84 @@
+import { ArrowDown, Download, Github, Linkedin, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import profileImage from "@/assets/greeshmanth-profile.jpg";
+
+const Hero = () => {
+  return (
+    <section id="home" className="min-h-screen flex items-center gradient-hero relative overflow-hidden">
+      {/* Floating Icons */}
+      <div className="absolute top-20 right-20 w-16 h-16 bg-white/20 rounded-full flex items-center justify-center glass-effect animate-pulse">
+        <Github className="w-8 h-8 text-white" />
+      </div>
+      <div className="absolute top-40 right-40 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center glass-effect animate-pulse">
+        <Linkedin className="w-6 h-6 text-white" />
+      </div>
+      <div className="absolute bottom-40 right-20 w-14 h-14 bg-white/20 rounded-full flex items-center justify-center glass-effect animate-pulse">
+        <Mail className="w-7 h-7 text-white" />
+      </div>
+
+      <div className="container mx-auto px-4">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Content */}
+          <div className="text-white">
+            <h1 className="font-display text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+              Hire Me To<br />
+              Develop Your<br />
+              <span className="text-accent">Website.</span>
+            </h1>
+            <div className="relative">
+              <div className="absolute -bottom-2 left-0 w-48 h-1 bg-accent rounded-full"></div>
+            </div>
+            <p className="text-xl mb-8 text-white/90 leading-relaxed mt-8">
+              Full-Stack Developer | Certified Cloud & AI Professional
+            </p>
+            <p className="text-lg mb-8 text-white/80 leading-relaxed max-w-lg">
+              Computer Science graduate with hands-on experience in full-stack development using Java, Spring Boot, and React.js. Building secure, responsive web applications with a passion for clean code.
+            </p>
+            <Button 
+              size="lg" 
+              className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-6 text-lg hover-scale"
+              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              View My Work
+            </Button>
+          </div>
+
+          {/* Profile Image & Card */}
+          <div className="relative">
+            <div className="relative inline-block">
+              <img
+                src={profileImage}
+                alt="Arvapalli Greeshmanth"
+                className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-full border-8 border-white/20 shadow-glow hover-scale"
+              />
+              
+              {/* Info Card */}
+              <div className="absolute bottom-0 right-4 glass-effect rounded-xl p-6 max-w-sm">
+                <div className="flex items-center space-x-3 mb-2">
+                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                  <span className="text-white font-semibold">Full-Stack Developer</span>
+                </div>
+                <p className="text-white/90 text-sm">
+                  Hi there! I'm Greeshmanth, a passionate web developer who loves to take challenges and create stunning website designs.
+                </p>
+                <div className="flex items-center space-x-2 mt-3 text-white/80 text-sm">
+                  <Mail className="w-4 h-4" />
+                  <span>Available for projects</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <div className="animate-bounce">
+            <ArrowDown className="w-6 h-6 text-white/60" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
