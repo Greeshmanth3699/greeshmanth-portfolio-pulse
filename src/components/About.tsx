@@ -42,9 +42,9 @@ const About = () => {
           <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-3 gap-8 items-start">
           {/* Bio */}
-          <div>
+          <div className="lg:col-span-1">
             <Card className="shadow-elegant hover-scale">
               <CardContent className="p-8">
                 <h3 className="font-display text-2xl font-semibold mb-6 text-primary">
@@ -64,9 +64,35 @@ const About = () => {
             </Card>
           </div>
 
-          {/* Education & Certifications */}
-          <div className="space-y-8">
-            {/* Education */}
+          {/* Certifications - Middle */}
+          <div className="lg:col-span-1">
+            <Card className="shadow-elegant hover-scale">
+              <CardContent className="p-8">
+                <div className="flex items-center space-x-3 mb-6">
+                  <Award className="w-8 h-8 text-primary" />
+                  <h3 className="font-display text-2xl font-semibold text-primary">
+                    Certifications
+                  </h3>
+                </div>
+                <div className="grid gap-2">
+                  {certifications.map((cert, index) => (
+                    <div
+                      key={index}
+                      className="flex items-start space-x-3 p-4 rounded-lg bg-muted/30 hover:bg-muted/50 transition-smooth group"
+                    >
+                      <div className="w-3 h-3 bg-primary rounded-full mt-1.5 group-hover:bg-accent transition-smooth flex-shrink-0"></div>
+                      <span className="text-foreground font-medium text-sm leading-relaxed">
+                        {cert}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Education - Right */}
+          <div className="lg:col-span-1">
             <Card className="shadow-elegant hover-scale">
               <CardContent className="p-8">
                 <div className="flex items-center space-x-3 mb-6">
@@ -99,31 +125,6 @@ const About = () => {
                       {index < education.length - 1 && (
                         <div className="absolute left-6 top-16 w-0.5 h-4 bg-primary/30"></div>
                       )}
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Certifications */}
-            <Card className="shadow-elegant hover-scale">
-              <CardContent className="p-8">
-                <div className="flex items-center space-x-3 mb-6">
-                  <Award className="w-8 h-8 text-primary" />
-                  <h3 className="font-display text-2xl font-semibold text-primary">
-                    Certifications
-                  </h3>
-                </div>
-                <div className="grid gap-2">
-                  {certifications.map((cert, index) => (
-                    <div
-                      key={index}
-                      className="flex items-start space-x-3 p-4 rounded-lg bg-muted/30 hover:bg-muted/50 transition-smooth group"
-                    >
-                      <div className="w-3 h-3 bg-primary rounded-full mt-1.5 group-hover:bg-accent transition-smooth flex-shrink-0"></div>
-                      <span className="text-foreground font-medium text-sm leading-relaxed">
-                        {cert}
-                      </span>
                     </div>
                   ))}
                 </div>
