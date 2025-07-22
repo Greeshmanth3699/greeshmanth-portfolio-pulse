@@ -75,19 +75,30 @@ const About = () => {
                     Education
                   </h3>
                 </div>
-                <div className="space-y-6">
+                <div className="space-y-4">
                   {education.map((edu, index) => (
-                    <div key={index} className="border-l-4 border-primary/20 pl-6">
-                      <h4 className="font-semibold text-lg text-foreground mb-1">
-                        {edu.degree}
-                      </h4>
-                      <p className="text-primary font-medium mb-1">
-                        {edu.institution}
-                      </p>
-                      <div className="flex justify-between items-center">
-                        <span className="text-muted-foreground">{edu.period}</span>
-                        <span className="font-semibold text-accent">{edu.grade}</span>
+                    <div key={index} className="relative">
+                      <div className="flex items-start space-x-4 p-4 rounded-lg bg-muted/30 hover:bg-muted/50 transition-smooth">
+                        <div className="flex-shrink-0 w-4 h-4 bg-primary rounded-full mt-2"></div>
+                        <div className="flex-1 min-w-0">
+                          <h4 className="font-semibold text-lg text-foreground mb-2 leading-tight">
+                            {edu.degree}
+                          </h4>
+                          <p className="text-primary font-medium mb-2 text-sm">
+                            {edu.institution}
+                          </p>
+                          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
+                            <span className="text-muted-foreground text-sm">{edu.period}</span>
+                            <span className="font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full text-sm w-fit">
+                              {edu.grade}
+                            </span>
+                          </div>
+                        </div>
                       </div>
+                      {/* Timeline connector line */}
+                      {index < education.length - 1 && (
+                        <div className="absolute left-6 top-16 w-0.5 h-4 bg-primary/30"></div>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -103,14 +114,16 @@ const About = () => {
                     Certifications
                   </h3>
                 </div>
-                <div className="grid gap-3">
+                <div className="grid gap-2">
                   {certifications.map((cert, index) => (
                     <div
                       key={index}
-                      className="flex items-center space-x-3 p-3 rounded-lg bg-muted/50 hover:bg-muted transition-smooth"
+                      className="flex items-start space-x-3 p-4 rounded-lg bg-muted/30 hover:bg-muted/50 transition-smooth group"
                     >
-                      <div className="w-2 h-2 bg-primary rounded-full"></div>
-                      <span className="text-foreground font-medium">{cert}</span>
+                      <div className="w-3 h-3 bg-primary rounded-full mt-1.5 group-hover:bg-accent transition-smooth flex-shrink-0"></div>
+                      <span className="text-foreground font-medium text-sm leading-relaxed">
+                        {cert}
+                      </span>
                     </div>
                   ))}
                 </div>
