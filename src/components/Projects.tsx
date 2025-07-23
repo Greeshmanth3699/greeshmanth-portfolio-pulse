@@ -77,10 +77,6 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className="flex space-x-3">
-                  <Button size="sm" className="hover-scale">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    View Demo
-                  </Button>
                   <Button variant="outline" size="sm" className="hover-scale">
                     <Github className="w-4 h-4 mr-2" />
                     Code
