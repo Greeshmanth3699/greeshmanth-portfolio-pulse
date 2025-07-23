@@ -1,6 +1,6 @@
 import { ArrowDown, Download, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import profileImage from "@/assets/greeshmanth-profile.jpg";
+import profileImage from "@/assets/greeshmanth-profile-new.jpg";
 
 const Hero = () => {
   return (
@@ -21,9 +21,9 @@ const Hero = () => {
           {/* Content */}
           <div className="text-white">
             <h1 className="font-display text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-              Hire Me To<br />
-              Develop Your<br />
-              <span className="text-accent">Website.</span>
+              Hi, I'm <span className="text-accent">Arvapalli</span><br />
+              <span className="text-accent">Greeshmanth</span><br />
+              Full-Stack Developer
             </h1>
             <div className="relative">
               <div className="absolute -bottom-2 left-0 w-48 h-1 bg-accent rounded-full"></div>
