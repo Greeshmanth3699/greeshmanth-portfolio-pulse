@@ -1,4 +1,5 @@
-import { GraduationCap, Award, MapPin } from "lucide-react";
+
+import { GraduationCap, Award, MapPin, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const About = () => {
@@ -24,12 +25,34 @@ const About = () => {
   ];
 
   const certifications = [
-    "Salesforce Certified AI Associate",
-    "Red Hat Certified Enterprise Application Developer (EX183)",
-    "AWS Certified Cloud Practitioner (CLF-C02)",
-    "Automation Anywhere (RPA)",
-    "Aviatrix MultiCloud Networking Associate (ACE)",
-    "Linguaskill (English proficiency)"
+    {
+      name: "Salesforce Certified AI Associate",
+      link: "https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=Uigmnhp7OXZKVUihI4W95pbLlxeMcBB524ZPdxxxNXo0GxkVDZYg5iXIrWAIB/Ov"
+    },
+    {
+      name: "Red Hat Certified Enterprise Application Developer (EX183)",
+      link: "https://www.credly.com/badges/7a551a34-d1ce-42c1-a733-0a9ab84e9c99/public_url"
+    },
+    {
+      name: "AWS Certified Cloud Practitioner (CLF-C02)",
+      link: "https://www.credly.com/badges/8013a1a7-149b-42ef-98ed-db4bdbc727f4/public_url"
+    },
+    {
+      name: "ServiceNow Certified System Administrator (CSA)",
+      link: "https://www.credly.com/badges/d27218b5-57d0-483c-bf92-975765f64310/public_url"
+    },
+    {
+      name: "Automation Anywhere (RPA)",
+      link: null
+    },
+    {
+      name: "Aviatrix MultiCloud Networking Associate (ACE)",
+      link: "https://www.credly.com/badges/0c012427-1230-4fbd-a939-7316a266dbf5/linked_in?t=smvbxf"
+    },
+    {
+      name: "Linguaskill (English proficiency)",
+      link: null
+    }
   ];
 
   return (
@@ -81,9 +104,21 @@ const About = () => {
                       className="flex items-start space-x-3 p-4 rounded-lg bg-muted/30 hover:bg-muted/50 transition-smooth group"
                     >
                       <div className="w-3 h-3 bg-primary rounded-full mt-1.5 group-hover:bg-accent transition-smooth flex-shrink-0"></div>
-                      <span className="text-foreground font-medium text-sm leading-relaxed">
-                        {cert}
-                      </span>
+                      <div className="flex-1 min-w-0">
+                        <span className="text-foreground font-medium text-sm leading-relaxed">
+                          {cert.name}
+                        </span>
+                        {cert.link && (
+                          <a
+                            href={cert.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="ml-2 inline-flex items-center text-primary hover:text-accent transition-smooth"
+                          >
+                            <ExternalLink className="w-3 h-3" />
+                          </a>
+                        )}
+                      </div>
                     </div>
                   ))}
                 </div>

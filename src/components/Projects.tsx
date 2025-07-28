@@ -1,3 +1,4 @@
+
 import { ExternalLink, Github } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -9,28 +10,32 @@ const Projects = () => {
       description: "A comprehensive platform that collects, processes, and evaluates student feedback for academic performance analysis with real-time analytics.",
       tech: "Spring Boot",
       image: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-      features: ["Real-time Analytics", "Secure Authentication", "Data Visualization"]
+      features: ["Real-time Analytics", "Secure Authentication", "Data Visualization"],
+      github: "https://github.com/Greeshmanth3699/FeedbackEvaluationSystem"
     },
     {
       title: "Student Learning Management Website",
       description: "Full-featured learning management system that manages online learning activities, student registrations, and comprehensive course content delivery.",
       tech: "Django",
       image: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-      features: ["Course Management", "Student Portal", "Progress Tracking"]
+      features: ["Course Management", "Student Portal", "Progress Tracking"],
+      github: "https://github.com/Greeshmanth3699/Student-Learning-Management-System"
     },
     {
       title: "AI Mock Interview Platform",
       description: "An interactive platform simulating mock interview questions using AI technology to help students prepare for technical interviews effectively.",
       tech: "React",
       image: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
-      features: ["AI-Powered Questions", "Performance Analysis", "Video Recording"]
+      features: ["AI-Powered Questions", "Performance Analysis", "Video Recording"],
+      github: null
     },
     {
       title: "Placement Portal",
       description: "A comprehensive portal for managing student placement data, registrations, and notifications with company integration and tracking systems.",
       tech: "Java",
       image: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
-      features: ["Company Integration", "Application Tracking", "Notification System"]
+      features: ["Company Integration", "Application Tracking", "Notification System"],
+      github: "https://github.com/Greeshmanth3699/PLACEMENT-PORTAL"
     }
   ];
 
@@ -77,10 +82,14 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className="flex space-x-3">
-                  <Button variant="outline" size="sm" className="hover-scale">
-                    <Github className="w-4 h-4 mr-2" />
-                    Code
-                  </Button>
+                  {project.github && (
+                    <Button variant="outline" size="sm" className="hover-scale" asChild>
+                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2" />
+                        Code
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>
