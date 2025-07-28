@@ -64,7 +64,7 @@ const Contact = () => {
 
     try {
       const result = await emailjs.send(
-        'service_6s24mui',
+        'service_zlz4d4m',
         'template_50x1w3d',
         {
           from_name: formData.name,
