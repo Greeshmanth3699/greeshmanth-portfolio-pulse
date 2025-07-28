@@ -83,12 +83,12 @@ const Projects = () => {
                 </div>
                 <div className="flex space-x-3">
                   {project.github && (
-                    <Button variant="outline" size="sm" className="hover-scale" asChild>
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="sm" className="hover-scale">
                         <Github className="w-4 h-4 mr-2" />
                         Code
-                      </a>
-                    </Button>
+                      </Button>
+                    </a>
                   )}
                 </div>
               </CardContent>

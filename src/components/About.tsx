@@ -65,11 +65,11 @@ const About = () => {
           <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 items-start">
+        <div className="grid lg:grid-cols-3 gap-8 items-stretch">
           {/* Bio */}
           <div className="lg:col-span-1">
-            <Card className="shadow-elegant hover-scale">
-              <CardContent className="p-8">
+            <Card className="shadow-elegant hover-scale h-full">
+              <CardContent className="p-8 h-full flex flex-col">
                 <h3 className="font-display text-2xl font-semibold mb-6 text-primary">
                   My Journey
                 </h3>
@@ -89,8 +89,8 @@ const About = () => {
 
           {/* Certifications - Middle */}
           <div className="lg:col-span-1">
-            <Card className="shadow-elegant hover-scale">
-              <CardContent className="p-8">
+            <Card className="shadow-elegant hover-scale h-full">
+              <CardContent className="p-8 h-full flex flex-col">
                 <div className="flex items-center space-x-3 mb-6">
                   <Award className="w-8 h-8 text-primary" />
                   <h3 className="font-display text-2xl font-semibold text-primary">
@@ -128,8 +128,8 @@ const About = () => {
 
           {/* Education - Right */}
           <div className="lg:col-span-1">
-            <Card className="shadow-elegant hover-scale">
-              <CardContent className="p-8">
+            <Card className="shadow-elegant hover-scale h-full">
+              <CardContent className="p-8 h-full flex flex-col">
                 <div className="flex items-center space-x-3 mb-6">
                   <GraduationCap className="w-8 h-8 text-primary" />
                   <h3 className="font-display text-2xl font-semibold text-primary">

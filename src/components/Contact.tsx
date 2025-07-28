@@ -63,7 +63,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      await emailjs.send(
+      const result = await emailjs.send(
         'service_6s24mui',
         'template_50x1w3d',
         {
@@ -74,6 +74,8 @@ const Contact = () => {
         },
         'pKmYULOEnmqMCuZUG'
       );
+      
+      console.log('EmailJS Success:', result);
 
       toast({
         title: "Message Sent!",
