@@ -52,20 +52,6 @@ const Hero = () => {
                 className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-full border-8 border-white/20 shadow-glow hover-scale"
               />
               
-              {/* Info Card */}
-              <div className="absolute bottom-0 right-4 glass-effect rounded-xl p-6 max-w-sm">
-                <div className="flex items-center space-x-3 mb-2">
-                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-white font-semibold">Full-Stack Developer</span>
-                </div>
-                <p className="text-white/90 text-sm">
-                  Hi there! I'm Greeshmanth, a passionate web developer who loves to take challenges and create stunning website designs.
-                </p>
-                <div className="flex items-center space-x-2 mt-3 text-white/80 text-sm">
-                  <Mail className="w-4 h-4" />
-                  <span>Available for projects</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
