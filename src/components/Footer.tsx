@@ -24,7 +24,7 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="text-center">
             <div className="font-display font-bold text-3xl mb-4">
-              Arvapalli Greeshmanth prakash
+              Arvapalli Greeshmanth
             </div>
             <p className="text-secondary-foreground/80 mb-6 max-w-md mx-auto">
               Full-Stack Developer passionate about creating innovative web solutions 
