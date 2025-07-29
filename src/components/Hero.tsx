@@ -34,13 +34,24 @@ const Hero = () => {
             <p className="text-lg mb-8 text-white/80 leading-relaxed max-w-lg">
               Computer Science graduate with hands-on experience in full-stack development using Java, Spring Boot, and React.js. Building secure, responsive web applications with a passion for clean code.
             </p>
-            <Button 
-              size="lg" 
-              className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-6 text-lg hover-scale"
-              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              View My Work
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button 
+                size="lg" 
+                className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-6 text-lg hover-scale"
+                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                View My Work
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-6 text-lg hover-scale"
+                onClick={() => window.open('/resume.pdf', '_blank')}
+              >
+                <Download className="w-5 h-5 mr-2" />
+                Download Resume
+              </Button>
+            </div>
           </div>
 
           {/* Profile Image & Card */}
