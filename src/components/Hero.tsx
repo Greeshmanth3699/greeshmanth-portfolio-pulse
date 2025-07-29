@@ -45,15 +45,11 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-6 text-lg hover-scale group"
-                onClick={() => window.open('https://drive.google.com/uc?export=download&id=1klQQdET4Rlv7rppofQoqH5jf7RkDt7wd', '_blank')}
+                className="border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-6 text-lg hover-scale"
+                onClick={() => window.open('https://drive.google.com/file/d/1klQQdET4Rlv7rppofQoqH5jf7RkDt7wd/view?usp=sharing', '_blank')}
               >
-                <Download className="w-5 h-5 mr-2 group-hover:hidden" />
-                <span className="group-hover:hidden">Resume</span>
-                <span className="hidden group-hover:inline-flex items-center">
-                  <Download className="w-5 h-5 mr-2" />
-                  Download Resume
-                </span>
+                <Download className="w-5 h-5 mr-2" />
+                Download Resume
               </Button>
             </div>
           </div>
