@@ -27,7 +27,7 @@ const About = () => {
   const certifications = [
     {
       name: "Salesforce Certified AI Associate",
-      link: "https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=Uigmnhp7OXZKVUihI4W95pbLlxeMcBB524ZPdxxxNXo0GxkVDZYg5iXIrWAIB/Ov"
+      link: "https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=/MWYMO7RRdwlHN6WRaBnC9MpStWarPi06EqPmiu6NAKppuOJqHOZ6+MuhXK552io"
     },
     {
       name: "Red Hat Certified Enterprise Application Developer (EX183)",
